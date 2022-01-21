@@ -3,7 +3,7 @@
 namespace _scripts.ECS_Scripts.ComponentTags
 {
     [GenerateAuthoringComponent]
-    public class BulletTag : IComponentData
+    public struct BulletTag : IComponentData
     {
     }
 }
