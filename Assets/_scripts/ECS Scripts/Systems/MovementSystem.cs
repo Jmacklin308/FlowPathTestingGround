@@ -9,6 +9,15 @@ namespace _scripts.ECS_Scripts.Systems
 {
     public class MovementSystem : SystemBase
     {
+        private EntityCommandBufferSystem commandBufferSystem;
+        
+        protected override void OnCreate()
+        {
+            base.OnCreate();
+            commandBufferSystem = World.GetOrCreateSystem<BeginInitializationEntityCommandBufferSystem>();
+        }
+
+
         protected override void OnUpdate()
         {
             //move all entities with move forward component
