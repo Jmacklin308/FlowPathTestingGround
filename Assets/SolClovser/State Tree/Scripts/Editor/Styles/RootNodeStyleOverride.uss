@@ -1,0 +1,8 @@
+.node
+{
+    
+}
+.node #node-border #title .unity-label
+{
+   color: orange;   
+}

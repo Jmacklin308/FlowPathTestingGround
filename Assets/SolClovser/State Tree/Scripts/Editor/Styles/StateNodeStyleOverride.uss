@@ -1,0 +1,6 @@
+.node
+{
+    background-image: resource("Assets/SolClovser/State Tree/Scripts/Editor/Icons/state-node-icon.png");
+    -unity-background-scale-mode: scale-to-fit;
+    -unity-background-image-tint-color: aqua;
+}

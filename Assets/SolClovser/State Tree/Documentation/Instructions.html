@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Instructions</title>
+</head>
+
+<body style="font-family: Arial; text-align: center;">
+
+<div>
+    <p>Hello, thank you for purchasing a copy of State Tree! </p>
+    <p>I can be contacted any time at <a href="mailto:clovsergames@gmail.com">clovsergames@gmail.com</a> or <a href="https://clovsergames.com/">https://clovsergames.com</a></p>
+    <p>Consider joining my <a href="https://discord.gg/wbDXFFWCyv" target="_blank">Discord</a> for a more cozy and close contact!</p>
+    <p>I am friendly and will do my best!</p>
+
+    <br>
+    <p>Watch video tutorial at <a href="https://youtu.be/4_xvpL-7j-0" target="_blank">Youtube</a></p>
+</div>
+
+<div style="margin-top:100px;">
+    <h4>Setup Instructions</h4>
+    <p>No setup required after you imported the package in your project.</p>  
+    <br>
+    <p>Reminder: Demo scene is made with URP so materials will show pink if you opened the package in built-in pipeline. You will need to assign new built-in materials yourself if that's the case and it should be alright again.</p>
+</div>
+
+
+<hr style="margin-top: 100px;">
+
+
+<div style="margin-top:100px;">
+    <h4>Usage</h4>
+    <p>Lets start with opening the State Tree Editor from Tools > Sol Clovser > State Tree Editor > Editor Window.</p>
+    <p>1) And create an empty game object for testing.</p>
+
+    <img src="Images/1.png" height="768" width="1366"/>
+
+    <br><br>
+    <p>2) Click "Start New Tree" and enter a name for your tree by clicking the tree name.</p>
+    <img src="Images/2.png" height="768" width="1366"/>
+
+    <br><br>
+    <p>3) Right click an empty are in the editor and create your first node as well as automatically created Root Node.</p>
+    <img src="Images/3.png" height="768" width="1366"/>
+
+    <br><br>
+    <p>4) Lets name it Idle and make the first connection from Root Node.</p>
+    <img src="Images/4.png" height="768" width="1366"/>
+
+
+    <br><br>
+    <p>5) Click Add Behaviour and enter a class name while Idle node is still selected and press enter after typing it.</p>
+    <img src="Images/5.png" height="768" width="1366"/>
+
+    <br><br>
+    <p>6) Tool created required scripts and files for us.</p>
+    <p> Now we can click "Select Behaviour" and see the file(scriptable object) in project window.</p>
+    <p> Lets double click the Script field of this scriptable object in the Inspector to open the script file.</p>
+    <img src="Images/6.png" height="768" width="1366"/>
+
+    <br><br>
+    <p>7) This is the template tool has created for us.</p>
+    <img src="Images/7.png" height="768" width="1366"/>
+
+    <br><br>
+    <p>8) Lets output something related to our state.</p>
+    <img src="Images/8.png" height="768" width="1366"/>
+
+    <br><br>
+    <p>9) As expected "Idle state started" logged 1 times when we enter the state.</p>
+    <p>And "Idle state updating" logs every frame while our Idle state is active.</p>
+    <img src="Images/9.png" height="768" width="1366"/>
+
+    <br><br>
+    <p>10) Lets add a new state and name it Walk. Repeat the process and add its behaviour and connect it to Idle state.</p>
+    <img src="Images/10.png" height="768" width="1366"/>
+
+
+    <br><br>
+    <p>11) This time we click the connection between Idle and Walk state and click "Add Condition" and enter a name for our class.</p>
+    <img src="Images/11.png" height="768" width="1366"/>
+
+
+    <br><br>
+    <p>12) Then we click "Select Condition" after it has been compiled and open its script the same way we did with states.</p>
+    <p>And this is the template tool created for us.</p>
+    <img src="Images/12.png" height="768" width="1366"/>
+
+
+    <br><br>
+    <p>13) Conditions basically run every frame while its node is active and it checks if it is true or false to decide if we should go to next state or not.</p>
+    <p>We are returning true if we are pressing W on keyboard. If not we are returning false.</p>
+    <img src="Images/13.png" height="768" width="1366"/>
+
+
+    <br><br>
+    <p>14) And press play. Then we should see its transitioning to Walk state when we press W on the game window.</p>
+    <img src="Images/14.png" height="768" width="1366"/>
+
+    
+    <br><br>
+    <p>15) Now we need to return to Idle state when we let go of W on keyboard.</p>
+    <p>To do this we add a Return Node by right clicking anywhere and select "state to return" in State Tree Inspector. In this case we want to return to Idle.</p>
+    <img src="Images/15.png" height="768" width="1366"/>
+
+
+    <br><br>
+    <p>16) Lastly lets select the connection between walk and return node.</p>
+    <p>Then select walk key pressed for our condition but this time we reverse it by selecting false. This effectively means if we are not pressing W on keyboard, return to idle.</p>
+    
+    <img src="Images/16.png" height="768" width="1366"/>
+
+
+    <br><br>
+    <p>17) And this is the base that all of our projects will evolve.</p>
+
+</div>
+<hr style="margin-top: 100px;">
+
+
+<div style="margin-top:100px; margin-bottom: 150px">
+    <br>
+    <p><b>That's all. Thank you! Happy coding and good luck on your projects!</b></p>
+    <p><b>And please leave a review on the Asset Store. It really helps with further purchases.</b></p>  
+</div>
+
+</body>
+</html>

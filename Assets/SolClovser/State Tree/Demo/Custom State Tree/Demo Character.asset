@@ -1,0 +1,166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7404393528669603524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056dceed917f2d340a33c9004c600298, type: 3}
+  m_Name: New Tree.Root Node
+  m_EditorClassIdentifier: 
+  guid: 259ef3c751ac8f640b177533a5325dda
+  nodeTitle: Root Node
+  treeAssetTitle: New Tree
+  isActive: 0
+  lastEditorPosition: {x: 0, y: 0}
+  transitions:
+  - {fileID: -6633260838913752276}
+--- !u!114 &-6633260838913752276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f80fdf80403ed47bdcf86755a485c4, type: 3}
+  m_Name: transition
+  m_EditorClassIdentifier: 
+  guid: d8eda223fcab99a4c8efd7b6675260e7
+  condition: {fileID: 0}
+  conditionsEquality: 0
+  from: {fileID: -7404393528669603524}
+  to: {fileID: 2626124718362202984}
+  animationTransitionSettings:
+    fixedTransitionDuration: 0.25
+    fixedTimeOffset: 0
+--- !u!114 &-172808233448200244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42f1f1b6a569ca43b3be9d5aa6d871c, type: 3}
+  m_Name: New Tree_Running
+  m_EditorClassIdentifier: 
+  guid: 80eb181669bbf0742aae92886e4095c9
+  nodeTitle: Running
+  treeAssetTitle: New Tree
+  isActive: 0
+  lastEditorPosition: {x: 336, y: 14}
+  transitions:
+  - {fileID: 5359515702526932041}
+  Behaviour: {fileID: 11400000, guid: 52d27763906feb74f962a4a27b32f5fb, type: 2}
+  resets: []
+  animationState:
+    animationStateName: Running
+    animationStateLayer: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309659e1bbdbfba4599e894b8e566958, type: 3}
+  m_Name: Demo Character
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -7404393528669603524}
+  nodes:
+  - {fileID: -7404393528669603524}
+  - {fileID: 2626124718362202984}
+  - {fileID: -172808233448200244}
+  - {fileID: 3851428153233349124}
+--- !u!114 &1823833140582450832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f80fdf80403ed47bdcf86755a485c4, type: 3}
+  m_Name: transition
+  m_EditorClassIdentifier: 
+  guid: e1ef859f3f9fd0e4fb940a6a43caff8c
+  condition: {fileID: 11400000, guid: c6508f02da27c5841999e600d44dce32, type: 2}
+  conditionsEquality: 0
+  from: {fileID: 2626124718362202984}
+  to: {fileID: -172808233448200244}
+  animationTransitionSettings:
+    fixedTransitionDuration: 0.25
+    fixedTimeOffset: 0
+--- !u!114 &2626124718362202984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42f1f1b6a569ca43b3be9d5aa6d871c, type: 3}
+  m_Name: New Tree_Idle
+  m_EditorClassIdentifier: 
+  guid: a822c3b2fafe71549a66e9f8c2e160cb
+  nodeTitle: Idle
+  treeAssetTitle: New Tree
+  isActive: 0
+  lastEditorPosition: {x: 168, y: 14}
+  transitions:
+  - {fileID: 1823833140582450832}
+  Behaviour: {fileID: 0}
+  resets: []
+  animationState:
+    animationStateName: Idle
+    animationStateLayer: 0
+--- !u!114 &3851428153233349124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10406c8c1b871524698bb255cc917388, type: 3}
+  m_Name: New Tree_Idle
+  m_EditorClassIdentifier: 
+  guid: caeb6ebc3c05d2d4f8a3ea6f8ac67c95
+  nodeTitle: Idle
+  treeAssetTitle: New Tree
+  isActive: 0
+  lastEditorPosition: {x: 494, y: 14}
+  transitions: []
+  stateToReturn: {fileID: 2626124718362202984}
+--- !u!114 &5359515702526932041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f80fdf80403ed47bdcf86755a485c4, type: 3}
+  m_Name: transition
+  m_EditorClassIdentifier: 
+  guid: 450503578a8bb9142b2a9b0d038f5dc0
+  condition: {fileID: 11400000, guid: c6508f02da27c5841999e600d44dce32, type: 2}
+  conditionsEquality: 1
+  from: {fileID: -172808233448200244}
+  to: {fileID: 3851428153233349124}
+  animationTransitionSettings:
+    fixedTransitionDuration: 0.25
+    fixedTimeOffset: 0

@@ -1,0 +1,36 @@
+.node
+{
+    min-width: 100px;    
+}
+
+.active-node #node-border
+{
+    background-color: greenyellow;
+}
+.node #title .unity-label
+{
+    font-size: 15px;
+    -unity-font-style: bold;
+    color: white;
+}
+
+.node .port .unity-label
+{
+    font-size: 15px;
+    -unity-font-style: bold;
+}
+.node #contents #top #input
+{
+    width: 0;
+    flex: none;
+}
+
+.true-condition #title .unity-label
+{
+    color: lightgreen;
+}
+
+.false-condition #title .unity-label
+{
+    color: lightcoral;
+}

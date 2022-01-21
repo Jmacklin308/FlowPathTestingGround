@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <uie:ToolbarMenu display-tooltip-when-elided="true" text="Settings" style="width: 100px;" />
+    <SplitView fixed-pane-initial-dimension="300" orientation="Horizontal" style="opacity: 1; display: flex;">
+        <ui:VisualElement name="left-panel" style="display: flex; flex-grow: 1;">
+            <ui:Label text="Inspector" display-tooltip-when-elided="true" class="inspector" style="background-color: rgb(32, 32, 32);" />
+            <InspectorView style="flex-grow: 1; -unity-text-align: upper-center; padding-left: 5px; padding-right: 5px; display: flex; max-height: none; max-width: none;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="right-panel" style="flex-grow: 0; background-image: none; -unity-slice-left: 10; -unity-slice-top: 10; -unity-slice-right: 10; -unity-slice-bottom: 10; -unity-background-scale-mode: scale-to-fit; white-space: normal; max-width: none; opacity: 1; justify-content: flex-start; flex-direction: column;">
+            <ui:Label text="Tree View" display-tooltip-when-elided="true" style="background-color: rgb(32, 32, 32);" />
+            <StateTreeView focusable="true" style="flex-grow: 1; display: flex;">
+                <ui:Label text="State Tree" display-tooltip-when-elided="true" name="treeNameLabel" style="background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); opacity: 1; -unity-font-style: bold; font-size: 20px; padding-left: 2px; visibility: visible; display: flex; width: 500px;">
+                    <ui:TextField picking-mode="Ignore" text="New State Tree" name="enterNewTreeNameField" style="background-color: rgba(0, 0, 0, 0); opacity: 1; color: rgb(255, 255, 255); height: 30px; display: flex; visibility: hidden; margin-left: 0;" />
+                </ui:Label>
+                <ui:Button text="Start New Tree" display-tooltip-when-elided="true" name="startNewTreeButton" style="-unity-text-align: middle-center; justify-content: flex-start; align-items: auto; top: 40%; width: 250px; left: 30%; height: 30px; position: absolute; opacity: 1; visibility: hidden;" />
+            </StateTreeView>
+        </ui:VisualElement>
+    </SplitView>
+    <ui:VisualElement name="StatusBar" style="height: 20px; border-top-width: 0.5px; border-top-color: rgb(40, 40, 40);">
+        <ui:Label text="Status: All clear. Enjoy your day." display-tooltip-when-elided="true" name="statusLabel" style="border-top-width: 0; border-top-color: rgb(0, 0, 0); margin-top: 2px;" />
+    </ui:VisualElement>
+</ui:UXML>
